@@ -1,5 +1,17 @@
+@keyframes piscar {
+    0% {
+        opacity: .8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100%{
+        opacity: .8;
+    }
+}
+
 body {
-    background-color: gray;
+    background-color: rgb(37, 34, 34);
 }
 
 header {
@@ -8,25 +20,136 @@ header {
     margin-left: -7px;
     text-align: center;
     margin-top: -20px;
-}
-
-aside {
-    background-color: black;
-    color: white;
-    width: 190px;
-    margin-top: -22px;
-    margin-left: -7px;
-    height: 500px;
+    margin-right: -7px;
+    box-shadow: 2px 2px 5px 2px rgb(0, 0, 0);
 }
 
 #menu ul{
-
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 5px 5px 20px 20px;
+    background-color: rgb(19, 19, 19);
+    border-top: 1px solid rgba(255, 255, 255, 0.263);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.263);
 }
 
 #menu ul li{
-    background-color: gray;
-    padding-top: 5px;
-    margin-top: 5px;
-    margin-right: 5px;
-    margin-left: -15px;
+    display: inline-block;
+    background-color: rgb(11, 11, 11);
+    padding: 0px 5px 5px 0px;
+    font-size: 15px;
+    margin: 5px 5px 5px 0px;
+    border-radius: 3px 10px 3px 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.464);
+    border-right: 1px solid rgba(255, 255, 255, 0.464);
 }
+
+#menu li:hover {
+    background-color: rgb(53, 52, 52);
+}
+
+#menu li:hover #pisca {
+    background-color: green;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    text-decoration: underline;
+}
+
+.pisca {
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 11px 5px 0px 12px;
+    background-color: red;
+    animation: piscar 1s infinite;
+}
+
+#pisca:hover li  {
+    background-color: rgb(53, 52, 52);
+}
+
+/*------------section------------*/
+
+section {
+    background-color: white;
+    padding: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+    box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.722);
+}
+
+#modoLeitura {
+    margin-left: 48%;
+    padding: 2px;
+    border-radius: 25px;
+    background-color: rgba(203, 197, 197, 0.479);
+    font-size: 12px;
+    font-weight:bold;
+}
+
+#artigo {
+    border: 1px solid rgb(182, 176, 176);
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.496);
+}
+
+#artigo h1 {
+    text-align: center;
+    border-bottom: 1px solid rgb(182, 176, 176);
+}
+
+.pisca1 {
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 4px;
+    background-color: red;
+    animation: piscar 1s infinite;
+}
+
+.pisca2 {
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    padding: 6px;
+    margin-right: 4px;
+    background-color: rgb(204, 255, 0);
+    animation: piscar 1s infinite;
+}
+
+.pisca3 {
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    padding: 7px;
+    margin-right: 4px;
+    background-color: rgb(51, 255, 0);
+    animation: piscar 1s infinite;
+}
+
+/*------------footer--------------*/
+
+footer {
+    background-color: black;
+    margin-top: 10px;
+    margin-left: -7px;
+    margin-right: -7px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.263);
+}
+
+
+
+
+
