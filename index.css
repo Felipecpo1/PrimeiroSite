@@ -144,6 +144,22 @@ section {
     background-color: rgb(51, 255, 0);
     animation: piscar 1s infinite;
 }
+/*------------aside--------------*/
+
+aside {
+    color: white;
+    background-color: black;
+    top: 87px;
+    right: 0;
+    position: fixed;
+    padding: 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.263);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.263);
+}
+
+#menuCor input {
+    margin-top: 10px;
+}
 
 /*------------footer--------------*/
 

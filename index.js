@@ -1,4 +1,40 @@
+/*---------------cor da página----------------*/
 
+function azul() {
+    let body = document.getElementsByTagName('body') [0]
+    body.style.backgroundColor = '#000A54'
+    let header = document.getElementsByTagName('header') [0]
+    header.style.backgroundColor = '#00073D'
+    let a = header.getElementsByTagName('a')
+        for(i = 0; i < a.length; i++) {
+            a[i].style.color = 'white'
+        }
+    let aside = document.getElementsByTagName('aside' ) [0]
+    aside.style.backgroundColor = '#00073D'
+    aside.style.color = 'white'
+    let footer = document.getElementsByTagName('footer') [0]
+    footer.style.backgroundColor = '#00073D'
+    footer.style.color = 'white'
+}
+
+function branco() {
+    let body = document.getElementsByTagName('body') [0]
+    body.style.backgroundColor = '#DBDBDB'
+    let header = document.getElementsByTagName('header') [0]
+    header.style.backgroundColor = '#FFFFFF'
+    let a = header.getElementsByTagName('a')
+        for(i = 0; i < a.length; i++) {
+            a[i].style.color = 'black'
+        }
+    let aside = document.getElementsByTagName('aside' ) [0]
+    aside.style.backgroundColor = '#FFFFFF'
+    aside.style.color = 'black'
+    let footer = document.getElementsByTagName('footer') [0]
+    footer.style.backgroundColor = '#FFFFFF'
+    footer.style.color = 'black'
+}
+
+/* --------------modo leitura-----------------*/
 let modoLeituraOn = false
 
 function modoLeitura() {

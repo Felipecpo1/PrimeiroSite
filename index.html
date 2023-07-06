@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1><a href="">Meu Site</a></h1>
+        <h1><a href="index.html" target="_self">Meu Site</a></h1>
         <nav id="menu">
             <ul>
                 <li id="sobreMim"><a href="">Sobre mim </a><br></li>
@@ -30,7 +30,15 @@
                 <p>No momento, me dedico ao básico do projeto.</p>
             </article>
     </section>
-    
+    <aside>
+        <div id="menuCor">
+            Cor da página: <br>
+            <input onclick="azul()" name="cor" id="cor1" type="radio">
+            <label for="cor1"> Azul </label> <br>
+            <input onclick="branco()" name="cor" id="cor2" type="radio">
+            <label for="cor2">Branco</label> 
+        </div>
+    </aside>
     <footer>
         Felipe César&copy;
     </footer>
