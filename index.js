@@ -1,37 +1,70 @@
-/*---------------cor da página----------------*/
+/*--------------Cores da página-------------*/
+class Cor {
+    constructor(body, header, a, aside, asideColor, footer, footerColor) {
+    this.body = body;
+    this.header = header;
+    this.a = a;
+    this.aside = aside;
+    this.asideColor = asideColor;
+    this.footer = footer;
+    this.footerColor = footerColor;
+    }
 
-function azul() {
-    let body = document.getElementsByTagName('body') [0]
-    body.style.backgroundColor = '#000A54'
-    let header = document.getElementsByTagName('header') [0]
-    header.style.backgroundColor = '#00073D'
-    let a = header.getElementsByTagName('a')
-        for(i = 0; i < a.length; i++) {
-            a[i].style.color = 'white'
+    mudarCor() {
+    let body = document.getElementsByTagName('body')[0];
+    body.style.backgroundColor = this.body;
+    let header = document.getElementsByTagName('header')[0];
+    header.style.backgroundColor = this.header;
+    let a = header.getElementsByTagName('a');
+    for (let i = 0; i < a.length; i++) {
+        a[i].style.color = this.a;
+    }
+    let aside = document.getElementsByTagName('aside')[0];
+    aside.style.backgroundColor = this.aside;
+    aside.style.color = this.asideColor;
+    let footer = document.getElementsByTagName('footer')[0];
+    footer.style.backgroundColor = this.footer;
+    footer.style.color = this.footerColor;
+    }
+
+/*------------Azul-----------*/
+}
+function azul(){
+    class Azul extends Cor {
+        constructor(body, header, a, aside, asideColor, footer, footerColor) {
+        super(body, header, a, aside, asideColor, footer, footerColor);
         }
-    let aside = document.getElementsByTagName('aside' ) [0]
-    aside.style.backgroundColor = '#00073D'
-    aside.style.color = 'white'
-    let footer = document.getElementsByTagName('footer') [0]
-    footer.style.backgroundColor = '#00073D'
-    footer.style.color = 'white'
+    }
+
+    let corAzul = new Azul('#000A54', '#00073D', 'white', '#00073D', 'white', '#00073D', 'white');
+    corAzul.mudarCor();
 }
 
-function branco() {
-    let body = document.getElementsByTagName('body') [0]
-    body.style.backgroundColor = '#DBDBDB'
-    let header = document.getElementsByTagName('header') [0]
-    header.style.backgroundColor = '#FFFFFF'
-    let a = header.getElementsByTagName('a')
-        for(i = 0; i < a.length; i++) {
-            a[i].style.color = 'black'
+/*-----------Branco-------------*/
+
+function branco(){
+    class Branco extends Cor {
+        constructor(body, header, a, aside, asideColor, footer, footerColor){
+            super(body, header, a, aside, asideColor, footer, footerColor)
         }
-    let aside = document.getElementsByTagName('aside' ) [0]
-    aside.style.backgroundColor = '#FFFFFF'
-    aside.style.color = 'black'
-    let footer = document.getElementsByTagName('footer') [0]
-    footer.style.backgroundColor = '#FFFFFF'
-    footer.style.color = 'black'
+    }
+
+    let corBranco = new Branco('#DBDBDB', '#FFFFFF', 'black','#FFFFFF','black', '#FFFFFF', 'black')
+    corBranco.mudarCor()
+}
+
+/*----------Padrão------------*/
+
+function _default(){
+    class Default extends Cor {
+        constructor(body, header, a, aside, asideColor, footer, footerColor){
+            super(body, header, a, aside, asideColor, footer, footerColor)
+        }
+    }
+
+    let corDefault = new Default('rgb(7, 7, 7)','black','white','black','white', 'black', 'white')
+
+    corDefault.mudarCor()
 }
 
 /* --------------modo leitura-----------------*/
