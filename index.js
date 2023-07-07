@@ -34,23 +34,34 @@ function azul(){
         constructor(body, header, a, aside, asideColor, footer, footerColor) {
         super(body, header, a, aside, asideColor, footer, footerColor);
         }
+        desativarBotao() {
+            let botao = document.getElementById('modoLeitura');
+            botao.disabled = false;
+          }
     }
 
     let corAzul = new Azul('#000A54', '#00073D', 'white', '#00073D', 'white', '#00073D', 'white');
     corAzul.mudarCor();
+    corAzul.desativarBotao();
 }
 
 /*-----------Branco-------------*/
 
-function branco(){
+function branco() {
     class Branco extends Cor {
-        constructor(body, header, a, aside, asideColor, footer, footerColor){
-            super(body, header, a, aside, asideColor, footer, footerColor)
-        }
+      constructor(body, header, a, aside, asideColor, footer, footerColor) {
+        super(body, header, a, aside, asideColor, footer, footerColor);
+      }
+      desativarBotao() {
+        let botao = document.getElementById('modoLeitura');
+        botao.disabled = true;
+      }
     }
-
-    let corBranco = new Branco('#DBDBDB', '#FFFFFF', 'black','#FFFFFF','black', '#FFFFFF', 'black')
-    corBranco.mudarCor()
+    let corBranco = new Branco('#DBDBDB', '#FFFFFF', 'black', '#FFFFFF', 'black', '#FFFFFF', 'black');
+    alert('"MODO LEITURA" desativado para essa configuração de página ')
+    corBranco.mudarCor();
+    corBranco.desativarBotao();
+    desativaMleitura()
 }
 
 /*----------Padrão------------*/
@@ -60,11 +71,17 @@ function _default(){
         constructor(body, header, a, aside, asideColor, footer, footerColor){
             super(body, header, a, aside, asideColor, footer, footerColor)
         }
+        desativarBotao() {
+            let botao = document.getElementById('modoLeitura');
+            botao.disabled = false;
+          }
     }
 
     let corDefault = new Default('rgb(7, 7, 7)','black','white','black','white', 'black', 'white')
 
     corDefault.mudarCor()
+    corDefault.desativarBotao();
+    
 }
 
 /* --------------modo leitura-----------------*/
@@ -93,9 +110,13 @@ function ativaMleitura() {
     artigo.style.borderColor = 'white'
     artigo.style.boxShadow = '1px 1px 1px 1px gray'
     let link = artigo.getElementsByTagName('a')
-    for (let i = 0; i < link.length; i++) {
-        link[i].style.color = 'lightblue'
-    }
+        for (let i = 0; i < link.length; i++) {
+            link[i].style.color = 'lightblue'
+        }
+    let pisca = artigo.getElementsByTagName('div')
+        for (let a = 0; a < pisca.length; a++) {
+            pisca[a].style.backgroundColor = 'white'
+        }
 }
 
 function desativaMleitura() {
@@ -109,8 +130,24 @@ function desativaMleitura() {
     artigo.style.color = '';
     artigo.style.borderColor = '';
     let link = artigo.getElementsByTagName('a')
-    for (let i = 0; i < link.length; i++) {
-        link[i].style.color = ''
+        for (let i = 0; i < link.length; i++) {
+            link[i].style.color = ''
+        }
+    let pisca = artigo.getElementsByTagName('div')
+        for (let a = 0; a < pisca.length; a++) {
+            pisca[a].style.backgroundColor = ''
+        }
+}
+
+/*---------Sobre Mim-------------*/
+
+click = false 
+
+function sobreMim() {
+    if(click = true){
+        let exibir = document.getElementById('oculto')
+        exibir.style.display = 'block'
+    } else {
+        
     }
-    
 }

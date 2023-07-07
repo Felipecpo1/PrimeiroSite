@@ -16,11 +16,23 @@ header a {
     color: white;
 }
 
+#oculto {
+    color: white;
+    background-color: black;
+    position: absolute;
+    text-align: initial;
+    padding: 4px;
+    margin-top: 5px;
+    border: 1px solid gray;
+    list-style: none;
+    display: none;
+}
+
 #menu ul {
     margin-bottom: 5px;
 }
 
-#menu ul li {
+.liPrinc {
     display: inline-block;
     font-size: 17px;
     padding-right: 10px;
@@ -29,8 +41,16 @@ header a {
 }
 
 #sobreMim {
+    display: inline-block;
+    font-size: 17px;
+    padding-right: 10px;
+    padding-left: 10px;
     border-left: 2px solid rgb(41, 41, 44);
     
+}
+
+#fotos {
+    border-left:2px solid rgb(41, 41, 44) ;
 }
 
 #menu a {
@@ -81,33 +101,33 @@ section {
     color: rgb(66, 19, 110);
 }
 
-.pisca1 {
+#pisca1 {
     display: inline-block;
     position: relative;
     border-radius: 50%;
     padding: 5px;
     margin-right: 4px;
-    background-color: rgba(3, 76, 193, 0.500);
+    background-color: rgba(0, 0, 0, 0.5);
     animation: piscar 1s infinite;
 }
 
-.pisca2 {
+#pisca2 {
     display: inline-block;
     position: relative;
     border-radius: 50%;
     padding: 6px;
     margin-right: 4px;
-    background-color: rgb(3, 76, 193, .800);
+    background-color: rgba(0, 0, 0, 0.8);
     animation: piscar 1s infinite;
 }
 
-.pisca3 {
+#pisca3 {
     display: inline-block;
     position: relative;
     border-radius: 50%;
     padding: 7px;
     margin-right: 4px;
-    background-color: rgb(3, 76, 193, .999);
+    background-color: rgba(6, 6, 6, 0.999);
     animation: piscar 1s infinite;
 }
 /*------------aside--------------*/
