@@ -144,10 +144,21 @@ function desativaMleitura() {
 click = false 
 
 function sobreMim() {
-    if(click = true){
-        let exibir = document.getElementById('oculto')
-        exibir.style.display = 'block'
+    if(click){
+        ocultar()
+        click = false
     } else {
-        
+        exibir()
+        click = true
     }
+}
+
+function ocultar(){
+    let ocultar = document.getElementById('oculto')
+    ocultar.style.display = 'none'  
+}
+
+function exibir(){
+    let exibir = document.getElementById('oculto')
+    exibir.style.display = 'block'  
 }

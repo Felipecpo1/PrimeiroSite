@@ -29,28 +29,22 @@ header a {
 }
 
 #menu ul {
-    margin-bottom: 5px;
+    margin-bottom: -1px;
 }
 
-.liPrinc {
+#menu li {
     display: inline-block;
     font-size: 17px;
     padding-right: 10px;
     padding-left: 10px;
-    border-right: 2px solid rgb(41, 41, 44);
+    margin-right: -6px;
+    border: 2px solid rgb(41, 41, 44);
 }
 
 #sobreMim {
     display: inline-block;
     font-size: 17px;
-    padding-right: 10px;
-    padding-left: 10px;
-    border-left: 2px solid rgb(41, 41, 44);
-    
-}
-
-#fotos {
-    border-left:2px solid rgb(41, 41, 44) ;
+    border-left: 2px solid rgb(41, 41, 44);    
 }
 
 #menu a {
@@ -60,6 +54,14 @@ header a {
 
 #menu a:hover {
     text-decoration: underline;
+}
+
+#oculto {
+    margin-left: -11px;
+}
+
+#oculto li{
+    border: none;
 }
 
 /*------------section------------*/
