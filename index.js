@@ -1,6 +1,6 @@
 /*--------------Cores da página-------------*/
 class Cor {
-    constructor(body, header, a, aside, asideColor, footer, footerColor) {
+    constructor(body, header, a, aside, asideColor, footer, footerColor, bordas) {
     this.body = body;
     this.header = header;
     this.a = a;
@@ -8,6 +8,7 @@ class Cor {
     this.asideColor = asideColor;
     this.footer = footer;
     this.footerColor = footerColor;
+    this.bordas = bordas;
     }
 
     mudarCor() {
@@ -34,15 +35,11 @@ function azul(){
         constructor(body, header, a, aside, asideColor, footer, footerColor) {
         super(body, header, a, aside, asideColor, footer, footerColor);
         }
-        desativarBotao() {
-            let botao = document.getElementById('modoLeitura');
-            botao.disabled = false;
-          }
     }
 
     let corAzul = new Azul('#000A54', '#00073D', 'white', '#00073D', 'white', '#00073D', 'white');
     corAzul.mudarCor();
-    corAzul.desativarBotao();
+    desativaMleitura()
 }
 
 /*-----------Branco-------------*/
@@ -52,15 +49,9 @@ function branco() {
       constructor(body, header, a, aside, asideColor, footer, footerColor) {
         super(body, header, a, aside, asideColor, footer, footerColor);
       }
-      desativarBotao() {
-        let botao = document.getElementById('modoLeitura');
-        botao.disabled = true;
-      }
     }
     let corBranco = new Branco('#DBDBDB', '#FFFFFF', 'black', '#FFFFFF', 'black', '#FFFFFF', 'black');
-    alert('"MODO LEITURA" desativado para essa configuração de página ')
     corBranco.mudarCor();
-    corBranco.desativarBotao();
     desativaMleitura()
 }
 
@@ -71,37 +62,30 @@ function _default(){
         constructor(body, header, a, aside, asideColor, footer, footerColor){
             super(body, header, a, aside, asideColor, footer, footerColor)
         }
-        desativarBotao() {
-            let botao = document.getElementById('modoLeitura');
-            botao.disabled = false;
-          }
     }
 
     let corDefault = new Default('rgb(7, 7, 7)','black','white','black','white', 'black', 'white')
 
     corDefault.mudarCor()
-    corDefault.desativarBotao();
-    
+    desativaMleitura()
 }
 
 /* --------------modo leitura-----------------*/
-let modoLeituraOn = false
-
-function modoLeitura() {
-    if (modoLeituraOn) {
-        desativaMleitura()
-        modoLeituraOn = false;
-    } else {
-        ativaMleitura()
-        modoLeituraOn = true;
-    
+function modoLeitura(){
+    class ModoL extends Cor {
+        constructor(body, header, a, aside, asideColor, footer, footerColor){
+            super(body, header, a, aside, asideColor, footer, footerColor)
+        }
     }
+
+    let modol = new ModoL('rgb(7, 7, 7)','black','white','black','white', 'black', 'white')
+
+    modol.mudarCor()
+    ativaMleitura()
+    
 }
 
 function ativaMleitura() {
-    let botao = document.getElementById('modoLeitura');
-    botao.style.backgroundColor = 'rgba(255, 255, 255, 0.263)'
-    botao.style.color = 'white'
     let secao = document.getElementsByTagName('section') [0];
     secao.style.backgroundColor = 'black'
     let artigo = document.getElementById('artigo');
@@ -120,9 +104,6 @@ function ativaMleitura() {
 }
 
 function desativaMleitura() {
-    let botao = document.getElementById('modoLeitura');
-    botao.style.backgroundColor = ''
-    botao.style.color = ''
     let secao = document.getElementsByTagName('section') [0];
     secao.style.backgroundColor = '';
     let artigo = document.getElementById('artigo');
