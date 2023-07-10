@@ -48,6 +48,9 @@ function azul(){
     let corAzul = new Azul('#000A54', '#00073D', 'white', '#000A54', 'white', '#00073D', 'white', '#00073D', '2px solid #0014AB');
     corAzul.mudarCor();
     desativaMleitura()
+
+    //armazenando escolha do usuário
+    localStorage.setItem ('selecaoCor', 'azul')
 }
 
 /*-----------Branco-------------*/
@@ -61,6 +64,9 @@ function branco() {
     let corBranco = new Branco('#DBDBDB', '#FFFFFF', 'black', '#FFFFFF', 'black', '#FFFFFF', 'black', 'white', '2px solid #DBDBDB');
     corBranco.mudarCor();
     desativaMleitura()
+
+    //armazenando escolha do usuário
+    localStorage.setItem ('selecaoCor', 'branco')
 }
 
 /*----------Padrão------------*/
@@ -76,6 +82,9 @@ function _default(){
 
     corDefault.mudarCor()
     desativaMleitura()
+
+    //armazenando escolha do usuário
+    localStorage.setItem ('selecaoCor', 'default')
 }
 
 /* --------------modo leitura-----------------*/
@@ -91,6 +100,8 @@ function modoLeitura(){
     modol.mudarCor()
     ativaMleitura()
     
+    //armazenando escolha do usuário
+    localStorage.setItem ('selecaoCor', 'modoLeitura')
 }
 
 function ativaMleitura() {
@@ -142,4 +153,21 @@ function ocultar(){
 function exibir(){
     let exibir = document.getElementById('oculto')
     exibir.style.display = 'block' 
+}
+
+/*---------Função onload em outra pg para cor selecionad---------*/
+
+window.onload = function() {
+    let selecaoCor = localStorage.getItem('selecaoCor')
+    if (selecaoCor) {
+        if (selecaoCor === 'azul') {
+            azul()
+        } else if (selecaoCor === 'branco'){
+            branco()
+        } else if (selecaoCor === 'default'){
+            _default()
+        }else {
+            modoLeitura()
+        }
+    }
 }
