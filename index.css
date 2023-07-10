@@ -1,3 +1,17 @@
+/* Exibição de menu */
+@keyframes exibir {
+    0% {
+        font-size: 1px;
+    }
+    50% {
+        font-size: 8px;
+    }
+    100% {
+        font-size: 17px;
+    }
+    
+}
+
 body {
     background-color: rgb(7, 7, 7);
 }
@@ -41,12 +55,6 @@ header a {
     border: 2px solid rgb(41, 41, 44);
 }
 
-#sobreMim {
-    display: inline-block;
-    font-size: 17px;
-    border-left: 2px solid rgb(41, 41, 44);    
-}
-
 #menu a {
     color: white;
     text-decoration: none;
@@ -62,6 +70,9 @@ header a {
 
 #oculto li{
     border: none;
+    font-size: 17px;
+    display: block;
+    animation: exibir .1s;
 }
 
 /*------------section------------*/
