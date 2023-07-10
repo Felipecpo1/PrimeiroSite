@@ -1,6 +1,6 @@
 /*--------------Cores da página-------------*/
 class Cor {
-    constructor(body, header, a, aside, asideColor, footer, footerColor, bordas) {
+    constructor(body, header, a, aside, asideColor, footer, footerColor, ocult, bordas) {
     this.body = body;
     this.header = header;
     this.a = a;
@@ -8,6 +8,7 @@ class Cor {
     this.asideColor = asideColor;
     this.footer = footer;
     this.footerColor = footerColor;
+    this.ocult = ocult;
     this.bordas = bordas;
     }
 
@@ -17,27 +18,34 @@ class Cor {
     let header = document.getElementsByTagName('header')[0];
     header.style.backgroundColor = this.header;
     let a = header.getElementsByTagName('a');
-    for (let i = 0; i < a.length; i++) {
-        a[i].style.color = this.a;
-    }
+        for (let i = 0; i < a.length; i++) {
+            a[i].style.color = this.a;
+        }
     let aside = document.getElementsByTagName('aside')[0];
     aside.style.backgroundColor = this.aside;
     aside.style.color = this.asideColor;
     let footer = document.getElementsByTagName('footer')[0];
     footer.style.backgroundColor = this.footer;
     footer.style.color = this.footerColor;
+    let ocult =document.getElementById ('oculto')
+    ocult.style.backgroundColor = this.ocult
+    let bordas = document.getElementsByClassName ('menul')
+        for (let i = 0; i< bordas.length; i++) {
+            bordas[i].style.border = this.bordas
+        }
     }
+}
 
 /*------------Azul-----------*/
-}
+
 function azul(){
     class Azul extends Cor {
-        constructor(body, header, a, aside, asideColor, footer, footerColor) {
-        super(body, header, a, aside, asideColor, footer, footerColor);
+        constructor(body, header, a, aside, asideColor, footer, footerColor, ocult, bordas) {
+        super(body, header, a, aside, asideColor, footer, footerColor, ocult, bordas);
         }
     }
 
-    let corAzul = new Azul('#000A54', '#00073D', 'white', '#00073D', 'white', '#00073D', 'white');
+    let corAzul = new Azul('#000A54', '#00073D', 'white', '#000A54', 'white', '#00073D', 'white', '#00073D', '2px solid #0014AB');
     corAzul.mudarCor();
     desativaMleitura()
 }
@@ -46,11 +54,11 @@ function azul(){
 
 function branco() {
     class Branco extends Cor {
-      constructor(body, header, a, aside, asideColor, footer, footerColor) {
-        super(body, header, a, aside, asideColor, footer, footerColor);
+      constructor(body, header, a, aside, asideColor, footer, footerColor, ocult, bordas) {
+        super(body, header, a, aside, asideColor, footer, footerColor, ocult, bordas);
       }
     }
-    let corBranco = new Branco('#DBDBDB', '#FFFFFF', 'black', '#FFFFFF', 'black', '#FFFFFF', 'black');
+    let corBranco = new Branco('#DBDBDB', '#FFFFFF', 'black', '#FFFFFF', 'black', '#FFFFFF', 'black', 'white', '2px solid #DBDBDB');
     corBranco.mudarCor();
     desativaMleitura()
 }
@@ -59,12 +67,12 @@ function branco() {
 
 function _default(){
     class Default extends Cor {
-        constructor(body, header, a, aside, asideColor, footer, footerColor){
-            super(body, header, a, aside, asideColor, footer, footerColor)
+        constructor(body, header, a, aside, asideColor, footer, footerColor, ocult, bordas){
+            super(body, header, a, aside, asideColor, footer, footerColor, ocult, bordas)
         }
     }
 
-    let corDefault = new Default('rgb(7, 7, 7)','black','white','black','white', 'black', 'white')
+    let corDefault = new Default('rgb(7, 7, 7)','black','white','black','white', 'black', 'white', 'black', '2px solid rgb(41, 41, 44)')
 
     corDefault.mudarCor()
     desativaMleitura()
@@ -73,12 +81,12 @@ function _default(){
 /* --------------modo leitura-----------------*/
 function modoLeitura(){
     class ModoL extends Cor {
-        constructor(body, header, a, aside, asideColor, footer, footerColor){
-            super(body, header, a, aside, asideColor, footer, footerColor)
+        constructor(body, header, a, aside, asideColor, footer, footerColor, ocult, bordas){
+            super(body, header, a, aside, asideColor, footer, footerColor, ocult, bordas)
         }
     }
 
-    let modol = new ModoL('rgb(7, 7, 7)','black','white','black','white', 'black', 'white')
+    let modol = new ModoL('rgb(7, 7, 7)','black','white','black','white', 'black', 'white', 'black', '2px solid rgb(41, 41, 44)')
 
     modol.mudarCor()
     ativaMleitura()
@@ -97,10 +105,6 @@ function ativaMleitura() {
         for (let i = 0; i < link.length; i++) {
             link[i].style.color = 'lightblue'
         }
-    let pisca = artigo.getElementsByTagName('div')
-        for (let a = 0; a < pisca.length; a++) {
-            pisca[a].style.backgroundColor = 'white'
-        }
 }
 
 function desativaMleitura() {
@@ -113,10 +117,6 @@ function desativaMleitura() {
     let link = artigo.getElementsByTagName('a')
         for (let i = 0; i < link.length; i++) {
             link[i].style.color = ''
-        }
-    let pisca = artigo.getElementsByTagName('div')
-        for (let a = 0; a < pisca.length; a++) {
-            pisca[a].style.backgroundColor = ''
         }
 }
 
@@ -141,5 +141,5 @@ function ocultar(){
 
 function exibir(){
     let exibir = document.getElementById('oculto')
-    exibir.style.display = 'block'  
+    exibir.style.display = 'block' 
 }

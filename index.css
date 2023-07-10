@@ -22,7 +22,7 @@ header {
     text-align: center;
     margin-top: -20px;
     margin-right: -7px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.263);
+    border-bottom: 1px solid rgba(124, 73, 73, 0.263);
 }
 
 header a {
@@ -31,8 +31,8 @@ header a {
 }
 
 #oculto {
+    background-color: rgb(0, 0, 0);
     color: white;
-    background-color: black;
     position: absolute;
     text-align: initial;
     padding: 4px;
@@ -41,6 +41,7 @@ header a {
     list-style: none;
     display: none;
 }
+
 
 #menu ul {
     margin-bottom: -1px;
@@ -114,35 +115,6 @@ section {
     color: rgb(66, 19, 110);
 }
 
-#pisca1 {
-    display: inline-block;
-    position: relative;
-    border-radius: 50%;
-    padding: 5px;
-    margin-right: 4px;
-    background-color: rgba(0, 0, 0, 0.5);
-    animation: piscar 1s infinite;
-}
-
-#pisca2 {
-    display: inline-block;
-    position: relative;
-    border-radius: 50%;
-    padding: 6px;
-    margin-right: 4px;
-    background-color: rgba(0, 0, 0, 0.8);
-    animation: piscar 1s infinite;
-}
-
-#pisca3 {
-    display: inline-block;
-    position: relative;
-    border-radius: 50%;
-    padding: 7px;
-    margin-right: 4px;
-    background-color: rgba(6, 6, 6, 0.999);
-    animation: piscar 1s infinite;
-}
 /*------------aside--------------*/
 
 aside {
