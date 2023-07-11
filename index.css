@@ -84,8 +84,8 @@ section {
     background-color: white;
     padding: 10px;
     margin-top: 10px;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 30%;
+    margin-right: 30%;
     margin-bottom: 10px;
     box-shadow: 1px 1px 1px 1px rgba(128, 128, 128, 0.722);
 }
@@ -100,6 +100,8 @@ section {
 }
 
 #artigo {
+    text-align: justify;
+    text-indent: 10px;
     border: 1px solid rgb(182, 176, 176);
     padding: 10px;
     margin: 5px;
@@ -124,7 +126,7 @@ aside {
     background-color: black;
     top: 87px;
     right: 0;
-    position: fixed;
+    position: absolute;
     padding: 10px;
     border-left: 1px solid rgba(255, 255, 255, 0.263);
     border-bottom: 1px solid rgba(255, 255, 255, 0.263);
@@ -146,6 +148,7 @@ footer {
     color: white;
     border-top: 1px solid rgba(255, 255, 255, 0.263);
 }
+
 
 
 

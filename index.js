@@ -155,19 +155,22 @@ function exibir(){
     exibir.style.display = 'block' 
 }
 
-/*---------Função onload em outra pg para cor selecionad---------*/
+/*Evento Onload para carregar a cor selecionada em outras paginas dentro do site, sem necessidade de selecionar a opc de nv*/
 
 window.onload = function() {
     let selecaoCor = localStorage.getItem('selecaoCor')
     if (selecaoCor) {
-        if (selecaoCor === 'azul') {
+        if (selecaoCor == 'azul') {
             azul()
-        } else if (selecaoCor === 'branco'){
+        } else if (selecaoCor == 'branco'){
             branco()
-        } else if (selecaoCor === 'default'){
+        } else if (selecaoCor == 'default'){
             _default()
-        }else {
+        } else {
             modoLeitura()
         }
     }
 }
+
+/* ----------------------Definição de idoma do site--------------------------  */
+
