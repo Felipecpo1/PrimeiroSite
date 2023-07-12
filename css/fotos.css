@@ -1,0 +1,96 @@
+@keyframes aparecer {
+    0% {
+      transform: translateX(-10%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+section {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+main ul{
+    text-align: center;
+    margin-left: -25px;
+}
+
+main span {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    border: 5px solid white;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    display: block;
+}
+
+main li {
+    display: inline-block;
+    list-style: none;
+}
+
+#foto01 {
+    background: url('/imagens/img4.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-color: white;
+}
+
+
+#foto02 {
+    background: url('/imagens/img1.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-color: white;
+}
+
+#foto03 {
+    background: url('/imagens/img5.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 120%;
+    background-color: white;
+}
+
+#foto04 {
+    background: url('/imagens/img2.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-color: white;
+}
+
+#foto05 {
+    background: url('/imagens/img3.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-color: white;
+}
+
+#foto06 {
+    background: url('/imagens/img6.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-color: white;
+}
+
+
+main span:hover {
+    -webkit-transform: scale(1.7);
+    -webkit-transition: .5s;
+}
+
+figcaption {
+    background-color: rgba(57, 55, 55, 0.5);
+    margin-left: 10%;
+    margin-right: 10%;
+    color: white;
+    opacity: 0;
+    border-radius: 0px 0px 20px 20px;
+}
+
+span:hover figcaption {
+    opacity: 1;
+    transition: .5s;
+    animation: aparecer .5s ease-in-out;
+}
