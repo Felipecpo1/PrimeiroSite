@@ -5,14 +5,7 @@
     src: url(/fonts/DancingScript-Regular.ttf);
 }
 /*Keyframe para fazer aparecer o fig caption no hover do li*/
-@keyframes aparecer {
-    0% {
-      transform: translateX(-10%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
+
 
 section {
     margin-left: 20%;

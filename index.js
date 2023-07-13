@@ -155,6 +155,31 @@ function exibir(){
     exibir.style.display = 'block' 
 }
 
+/* Menu cor da página aparece */
+
+clica = false
+
+function corAparece() {
+    if (clica) {
+        some()
+        clica = false
+        
+    } else {
+        aparece()
+        clica = true
+    }
+}
+
+function aparece () {
+    let main = document.getElementById('corOculto')
+    main.style.display = 'block'
+}
+
+function some() {
+    let main = document.getElementById('corOculto')
+    main.style.display = 'none'
+}
+
 /*Evento Onload para carregar a cor selecionada em outras paginas dentro do site, sem necessidade de selecionar a opc de nv*/
 
 window.onload = function() {

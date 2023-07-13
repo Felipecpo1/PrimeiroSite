@@ -12,6 +12,15 @@
     
 }
 
+@keyframes deslizar {
+    0% {
+      transform: translateY(-15%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
 body {
     background-color: rgb(7, 7, 7);
 }
@@ -124,12 +133,26 @@ section {
 aside {
     color: white;
     background-color: black;
-    top: 87px;
+    top: 85px;
     right: 0;
+    width: 130px;
     position: absolute;
     padding: 10px;
     border-left: 1px solid rgba(255, 255, 255, 0.263);
     border-bottom: 1px solid rgba(255, 255, 255, 0.263);
+}
+
+#corPag {
+    cursor: pointer;
+}
+
+#corPag span:hover {
+    text-decoration: underline;
+}
+
+#corOculto {
+    display: none;
+    animation: deslizar 0.01s ;
 }
 
 #menuCor input {
