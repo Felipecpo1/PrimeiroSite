@@ -3,21 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title>
+    <title>Contato</title>
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
     <style>
         #artigo {
             text-align: center;
+            
+
         }
         
         #contato {
             list-style: none;
+            margin-left: -20px;
         }
 
         #contato a {
             font-style: normal;
         }
+
+        #contato li:hover a {
+            font-size: 20px;
+            transition: .5s;
+        }
+
+        #icon {
+            max-width: 30px;
+            border-radius: 10px;
+            margin-top: 5px;
+        }
+
     </style>
 </head>
 <body>
@@ -43,12 +58,13 @@
     <section>
             <article id="artigo" >
                     <h4>Tem interesse no meu trabalho? Entre em contato por qualquer meio abaixo:</h4>
+                    <!-- inserção de links para contato e personalização de icones-->
                     <ul id="contato">
-                        <li><a href="https://github.com/Felipecpo1" target="_blank">GitHub</a></li>
-                        <li><a href="https://www.linkedin.com/in/felipe-c%C3%A9sar-37496527b/" target="_blank">Linkedin</a></li>
-                        <li>WhatsApp: +55 (32) 99177-0505</li>
-                        <li><a href="https://www.facebook.com/profile.php?id=100021485061187" target="_blank">Facebook</a></li>
-                        <li><a href="https://www.instagram.com/lp.b182/" target="_blank">Instagram</a></li>
+                        <li><img id="icon" src="/icon/github.png" alt=""> <a href="https://github.com/Felipecpo1" target="_blank">Github </a></li>
+                        <li><img id="icon" src="/icon/linkedin.png" alt=""> <a href="https://www.linkedin.com/in/felipe-c%C3%A9sar-37496527b/" target="_blank">Linkedin</a></li>
+                        <li> <img id="icon" src="/icon/whats.png" alt=""> <a href="https://contate.me/devfelipe" target="_blank">WhatsApp</a></li>
+                        <li> <img id="icon" src="/icon/facebook.png" alt=""> <a href="https://www.facebook.com/profile.php?id=100021485061187" target="_blank">Facebook</a></li>
+                        <li><img id="icon" src="/icon/instagram.png" alt=""> <a href="https://www.instagram.com/lp.b182/" target="_blank">Instagram</a></li>
                     </ul>
             </article>
         
