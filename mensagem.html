@@ -6,6 +6,39 @@
     <title>Início</title>
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
+    <style>
+
+        section {
+            margin-left: 17%;
+            margin-right: 17%;
+        }
+
+        #sugestao {
+            padding: 10px;
+            margin-right: 10%;
+            margin-left: 10%;
+        }
+
+        fieldset {
+            margin-top: 10px;
+            border: 1px solid rgb(161, 160, 160);
+        }
+
+        #motivo li {
+            list-style: none;
+            margin-left: -40px;
+        }
+
+        #enviar {
+            margin-left: 44%;
+            
+        }
+        
+        #idade {
+            width: 40px;
+        }
+
+    </style>
 </head>
 <body>
     <header>
@@ -22,13 +55,40 @@
                 </li>
                 <li class="menul"><a href="fotos.html">Fotos</a></li>
                 <li class="menul"><a href="contato.html">Contato</a></li>
-                <li class="menul"><a href="mensagem.html">Envie uma mensagem</a></li>
+                <li class="menul"><a href="mensagem.html">Envie uma sugestão</a></li>
             </ul>
         </nav>
     </header>
 
     <section>
+        <article id="artigo" >
+            <h1>Envie sugestões:</h1>
+            <form method="post" id="sugestao" action="mailto:felipeppt1@gmail.com">
+                <fieldset id="nome"> <p>Nome:
+                    <input onclick="visualizacaoApenas()" type="text" name="" id="" size="20" maxlength="25" placeholder="Digite nome e sobrenome"></p>
+                    <p>Idade: <input id="idade" type="number"></p>
+                </fieldset>
 
+                <fieldset id="email"> <p>Email: <input type="text" name="" id="" size="40" maxlength="40" placeholder="Sem espaços"></p></fieldset>
+
+                <fieldset id="motivo"> <p>A sua sugestão se refere a: </p>
+                    <ul>
+                        <li><input type="checkbox"> Acessibilidade</li>
+                        <li><input type="checkbox"> Erros na exibição do site</li>
+                        <li><input type="checkbox"> Erros no código-fonte</li>
+                        <li><input type="checkbox"> Erro de digitação </li>
+                        <li><input type="checkbox"> Conteúdo Ofensivo</li>
+                        <li><input type="checkbox"> Outro</li>
+                    </ul>
+                </fieldset>
+                    
+                <fieldset id="mensagem">
+                    <textarea name="" id="texto" cols="42" rows="5"></textarea> <br>
+                    <input id="enviar" type="submit">
+                </fieldset>
+                
+            </form>
+        </article>
     </section>
 
     <aside>
@@ -48,5 +108,11 @@
     <footer>
         Felipe César&copy;
     </footer>
+
+    <script>
+        function visualizacaoApenas(){
+            window.alert('ATENÇÃO!!! Esse formulário é apenas para visualização. No momento não há outra funcionalidade!!!')
+        }
+    </script>
 </body>
 </html>
