@@ -72,16 +72,16 @@
 
     <aside>
         <div id="menuCor">
-            Cor da página: <br>
+            <div id="corPag"><span onclick="corAparece()">Cor da página:</span></div>
             <!-- Botões de mudança de cor da página-->
-            <input onclick="azul()" name="cor" id="cor1" type="radio">
+            <div id="corOculto"><input onclick="azul()" name="cor" id="cor1" type="radio">
             <label for="cor1"> Azul </label> <br>
             <input onclick="branco()" name="cor" id="cor2" type="radio">
             <label for="cor2">Branco</label> <br>
             <input onclick="_default()" name="cor" id="cor3" type="radio">
             <label for="cor3"> Default </label> <br>
             <input onclick="modoLeitura()" name="cor" id="cor4" type="radio">
-            <label for="cor4"> Modo Leitura </label>
+            <label for="cor4"> Modo Leitura </label></div>
         </div>
     </aside>
     <footer>

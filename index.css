@@ -12,9 +12,11 @@
     
 }
 
+/* Deslizando menu de cores */
+
 @keyframes deslizar {
     0% {
-      transform: translateY(-15%);
+      transform: translateY(-2%);
     }
     100% {
       transform: translateY(0);
@@ -138,12 +140,13 @@ aside {
     width: 130px;
     position: absolute;
     padding: 10px;
-    border-left: 1px solid rgba(255, 255, 255, 0.263);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.263);
+    
 }
 
 #corPag {
+    padding: 5px;
     cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.263);
 }
 
 #corPag span:hover {
@@ -152,7 +155,11 @@ aside {
 
 #corOculto {
     display: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.263);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.263);
+    border-right: 1px solid rgba(255, 255, 255, 0.263);
     animation: deslizar 0.01s ;
+    padding-bottom: 2px;
 }
 
 #menuCor input {

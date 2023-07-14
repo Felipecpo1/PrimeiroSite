@@ -66,10 +66,10 @@
             <form method="post" id="sugestao" action="mailto:felipeppt1@gmail.com">
                 <fieldset id="nome"> <p>Nome:
                     <input onclick="visualizacaoApenas()" type="text" name="" id="" size="20" maxlength="25" placeholder="Digite nome e sobrenome"></p>
-                    <p>Idade: <input id="idade" type="number"></p>
+                    <p>Idade: <input onclick="visualizacaoApenas()" id="idade" type="number"></p>
                 </fieldset>
 
-                <fieldset id="email"> <p>Email: <input type="text" name="" id="" size="40" maxlength="40" placeholder="Sem espaços"></p></fieldset>
+                <fieldset id="email"> <p>Email: <input onclick="visualizacaoApenas()" type="text" name="" id="" size="40" maxlength="40" placeholder="Sem espaços"></p></fieldset>
 
                 <fieldset id="motivo"> <p>A sua sugestão se refere a: </p>
                     <ul>
@@ -83,7 +83,7 @@
                 </fieldset>
                     
                 <fieldset id="mensagem">
-                    <textarea name="" id="texto" cols="42" rows="5"></textarea> <br>
+                    <textarea onclick="visualizacaoApenas()" name="" id="texto" cols="42" rows="5"></textarea> <br>
                     <input id="enviar" type="submit">
                 </fieldset>
                 
@@ -93,16 +93,16 @@
 
     <aside>
         <div id="menuCor">
-            Cor da página: <br>
+            <div id="corPag"><span onclick="corAparece()">Cor da página:</span></div>
             <!-- Botões de mudança de cor da página-->
-            <input onclick="azul()" name="cor" id="cor1" type="radio">
+            <div id="corOculto"><input onclick="azul()" name="cor" id="cor1" type="radio">
             <label for="cor1"> Azul </label> <br>
             <input onclick="branco()" name="cor" id="cor2" type="radio">
             <label for="cor2">Branco</label> <br>
             <input onclick="_default()" name="cor" id="cor3" type="radio">
             <label for="cor3"> Default </label> <br>
             <input onclick="modoLeitura()" name="cor" id="cor4" type="radio">
-            <label for="cor4"> Modo Leitura </label>
+            <label for="cor4"> Modo Leitura </label></div>
         </div>
     </aside>
     <footer>
